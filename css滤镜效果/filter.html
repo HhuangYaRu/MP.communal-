@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <style>
+    /*图片滤镜不支持iE*/
+    body{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    img{
+      display: block;
+      width: 90%;
+      margin: 0 auto 20px;
+    }
+    .img-1{
+      /*高斯模糊*/
+      -webkit-filter: blur(5px);
+      filter:blur(5px);
+    }
+    .img-2{
+      /*Brightness 函数实例，使图片变亮*/
+      -webkit-filter: brightness(200%);
+      filter: brightness(200%);
+    }
+    .img-3{
+      /*Contrast 函数实例 给图像设置一个对比度*/
+      -webkit-filter: contrast(200%);
+      filter:contrast(50%);
+    }
+    .img-4{
+      /*drop-shadow 函数实例  给图像设置一个阴影效果*/
+      -webkit-filter: drop-shadow(8px 8px 10px red);
+      filter:drop-shadow(8px 8px 15px red);
+    }
+    .img-5{
+      /*grayscale 函数实例 将图像转为灰度图像*/
+      -webkit-filter: grayscale(80%);
+      filter: grayscale(80%);
+    }
+    .img-6{
+      /*hue-rotate()函数实例 给图像应用色相旋转*/
+      -webkit-filter: hue-rotate(90deg);
+      filter: hue-rotate(90deg);
+    }
+    .img-7{
+      /*invert 函数实例 翻转输入图像*/
+      -webkit-filter: invert(100%);
+      filter:invert(100%);
+    }
+    .img-8{
+      /*opacity 函数实例 转化图像的透明度*/
+      -webkit-filter: opacity(30%);
+      filter: opacity(30%);
+    }
+    .img-9{
+      /*saturate 函数实例 转换图像饱和度*/
+      -webkit-filter: saturate(800%);
+      filter: saturate(800%);
+    }
+    .img-10{
+      /*sepia 函数实例 将图像转为深褐色*/
+      -webkit-filter: sepia(100%);
+      filter: sepia(100%);
+    }
+    .img-11{
+      /*复合函数，使用多个滤镜，每个滤镜使用空格分隔*/
+      -webkit-filter: contrast(200%) brightness(150%);
+      filter: contrast(200%) brightness(150%);
+    }
+  </style>
+</head>
+<body>
+<img src="../images/785bb5c32de06d71232d671104047001.jpg" class="img-1">
+<img src="../images/785bb5c32de06d71232d671104047001.jpg" alt="" class="img-2">
+<img src="../images/785bb5c32de06d71232d671104047001.jpg" alt="" class="img-3">
+<img src="../images/785bb5c32de06d71232d671104047001.jpg" alt="" class="img-4">
+<img src="../images/785bb5c32de06d71232d671104047001.jpg" alt="" class="img-5">
+<img src="../images/785bb5c32de06d71232d671104047001.jpg" alt="" class="img-6">
+<img src="../images/785bb5c32de06d71232d671104047001.jpg" alt="" class="img-7">
+<img src="../images/785bb5c32de06d71232d671104047001.jpg" alt="" class="img-8">
+<img src="../images/785bb5c32de06d71232d671104047001.jpg" alt="" class="img-9">
+<img src="../images/785bb5c32de06d71232d671104047001.jpg" alt="" class="img-10">
+<img src="../images/785bb5c32de06d71232d671104047001.jpg" alt="" class="img-11">
+</body>
+</html>

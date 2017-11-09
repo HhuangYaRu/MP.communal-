@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="renderer" content="webkit">
+  <meta name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-bar-style" content="black">
+  <meta name="msapplicationt-tap-highlight" content="no">
+  <meta name="format-detection" content="telephone=no,email=no,address=no,date=no">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="goole" value="notranslate">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+    .modal-alert,.modal-confirm{
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0,0,0,0);
+    }
+    .alert,.modal{
+      width: 200px;
+      height: auto;
+      background: rgba(0,0,0,.5);
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform:translate(-50%);
+      padding: 10px;
+      color: #FFF;
+      font-size: 18px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .modal-txt,.modal-btn{
+      width: 100%;
+    }
+    .modal-btn{
+      margin-top: 10px;
+    }
+    .modal-btn button{
+      display: inline-block;
+      width: 100%;
+      border: 0;
+      outline: 0;
+      border-radius: 5px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 18px;
+      color: #fff;
+    }
+    button{
+      width: 30%;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      border: 1px solid transparent;
+      background: linear-gradient(to bottom right, #ff6600 , #00f);
+    }
+  </style>
+</head>
+<body>
+<h1>提示与警告框案例</h1>
+<button class="warn">提示框</button>
+<button class="confirm-toast">确定框</button>
+
+<script src="js/jQ/jquery-3.2.1.min.js"></script>
+<script>
+
+  function showToast(msg) {
+    var html = "<div class='modal-alert'>"+
+      "<div class='alert'>"+"</div>"+
+      "</div>";
+    var modalLength = $('.modal-alert').length;
+    if(modalLength === 0){
+      $('body').prepend(html);
+      $('.modal-alert').on('touchend',function (e) {
+        e.preventDefault();
+        console.log(modalLength);
+        console.info('走到哪里了0000000000提示');
+        $('.modal-alert').hide();
+      })
+    }
+    $('.alert').html(msg);
+    $('.modal-alert').show();
+  };
+
+
+  $('.warn').on('touchend',function (e) {
+    e.preventDefault();
+    showToast('这是个提示框,可以写很多字的提示框~~~~~~~~~~~');
+  });
+
+
+
+
+  function confirmToast(msg) {
+  var html = '<div class="modal-confirm">'+
+      '<div class="modal">'+
+        '<div class="modal-txt"></div>'+
+        '<div class="modal-btn">'+
+          '<button class="confirm">确定</button>'+
+        '</div>'+
+      '</div>'+
+    '</div>';
+  var modalConfirmLength = $('.modal-confirm').length;
+  if(modalConfirmLength === 0){
+    $('body').prepend(html);
+    $('.confirm').on('touchend',function (e) {
+      e.preventDefault();
+      console.info(modalConfirmLength);
+      console.info('走到哪里了0000000000确定');
+      $('.modal-confirm').hide();
+    })
+  }
+  $('.modal-txt').html(msg);
+    $('.modal-confirm').show();
+}
+
+  $('.confirm-toast').click(function () {
+    confirmToast('这是个确定框,可以写很多字的提示框~~~~');
+  })
+
+</script>
+
+</body>
+</html>

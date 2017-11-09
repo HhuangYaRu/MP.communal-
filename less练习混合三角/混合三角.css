@@ -1,0 +1,8 @@
+.sanjiao {
+  border-color: transparent transparent transparent #f00;
+  border-style: dashed dashed dashed solid;
+  width: 0;
+  height: 0;
+  border-width: 20px;
+  overflow: hidden;
+}

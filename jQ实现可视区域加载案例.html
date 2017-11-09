@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .d1{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #ff6600;
+      border: 5px solid #0000ff;
+    }
+    li{
+      height: 50px;
+      line-height: 50px;
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+<ul style="opacity: 0">
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+  <li>1111111111111</li>
+</ul>
+<div class="d1"></div>
+
+<script src="js/jQ/jquery-3.2.1.min.js"></script>
+<script src="js/MP.Plug.min.js"></script>
+<script>
+  $(window).scroll(function () {
+    var scrollHeight = $(window).scrollTop();//滚动高度
+    var height = $(window).height();//可视区域高度
+    var ulTop = $('ul').offset().top;//偏移高度,ul到顶部距离
+    var divTop = $('.d1').offset().top;//偏移高度,div到顶部距离
+    if(height + scrollHeight >= ulTop){
+      $('ul').animate({
+        opacity:'1'
+      },2000);
+    };
+    if(height + scrollHeight >= divTop){
+      $('.d1').animate({
+        marginLeft:'300px'
+      },3000);
+    }
+  })
+</script>
+</body>
+</html>

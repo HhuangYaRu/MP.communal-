@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    li{
+      height: 80px;
+      line-height: 80px;
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+  <li>滚动到底部和顶部加载</li>
+</ul>
+
+<script src="js/jQ/jquery-3.2.1.min.js"></script>
+<script src="js/MP.Plug.min.js"></script>
+<script>
+$(window).scroll(function () {
+  var keshiH = $(window).height();//获得可视高度
+  var documentH = $(document).height();//获取文档高度
+  var scrollH = $(window).scrollTop();
+  if(keshiH + scrollH >= documentH){
+    alert('滚动到底部~~~');
+  }
+  if(scrollH === 0){
+    alert('滚动到头部~~~~~')
+  }
+})
+</script>
+</body>
+</html>

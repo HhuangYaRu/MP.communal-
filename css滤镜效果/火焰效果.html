@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    /*相互融合效果*/
+    .filter-1{
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background: #dddddd;
+      filter: contrast(20);
+      border: 1px solid #000;
+    }
+    .filter-1>.d1{
+      position: absolute;
+      top: 40%;
+      left: 35%;
+      width: 85px;
+      height: 85px;
+      background: #000;
+      filter: blur(10px);
+      border-radius: 50%;
+      animation:myFilter1 3s linear infinite;
+    }
+    .filter-1>.d2{
+      position: absolute;
+      top: 49%;
+      left: 60%;
+      width: 50px;
+      height: 50px;
+      background: #0000ff;
+      filter: blur(10px);
+      border-radius: 50%;
+      animation:myFilter2 3s linear infinite;
+    }
+    @keyframes myFilter1 {
+      0%{
+        left: 35%;
+      }
+      50%{
+        left: 55%;
+      }
+      100%{
+        left: 35%;
+      }
+    }
+    @keyframes myFilter2 {
+      0%{
+        left: 60%;
+      }
+      50%{
+        left: 35%;
+      }
+      100%{
+        left: 60%;
+      }
+    }
+    
+    /*火焰效果*/
+    .flame{
+      width: 100%;
+      height: 400px;
+      border: 1px solid #000;
+      /*filter: contrast(20);*/
+      background: #000;
+    }
+    .flame-1{
+      position: relative;
+      width: 0;
+      height: 0;
+      border-radius: 45%;
+      border: 150px solid #000;
+      border-bottom-color: transparent;
+      background: #b5932f;
+      margin: auto;
+      filter: blur(20px) contrast(30);
+      transform: scaleX(.5);
+    }
+    .flame-dot{
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #000;
+      position: absolute;
+      top: -100px;
+      /*animation:myMove 2s linear infinite;*/
+    }
+    .flame-dot-1{
+      left: 0;
+      animation:myMove 1s infinite 5.4s linear;
+    }
+    .flame-dot-2{
+      left: 10px;
+      animation:myMove 2.8s infinite 1.9s linear;
+    }
+    .flame-dot-3{
+      left: 20px;
+      animation:myMove 1.1s infinite 3.3s linear;
+    }
+    .flame-dot-4{
+      left: 30px;
+      animation:myMove 2.5s infinite 5.6s linear;
+    }
+    .flame-dot-5{
+      left: 40px;
+      animation:myMove 2s infinite 2.7s linear;
+    }
+    .flame-dot-6{
+      left: -20px;
+      animation:myMove 1.8s infinite 0.6s linear;
+    }
+    .flame-dot-7{
+      left: -40px;
+      animation:myMove 3.3s infinite 6s linear;
+    }
+    .flame-dot-8{
+      left: -50px;
+      animation:myMove 3.3s infinite 1.9s linear;
+    }
+    .flame-dot-9{
+      left: -70px;
+      animation:myMove 2.5s infinite 3.5s linear;
+    }
+    .flame-dot-10{
+      left: 70px;
+      animation:myMove 1.2s infinite 2.1s linear;
+    }
+    .flame-dot-11{
+      left: 90px;
+      animation:myMove 2.7s infinite 0.7s linear;
+    }
+    .flame-dot-12{
+      left: 90px;
+      animation:myMove 1.5s infinite 2.2s linear;
+    }
+    .flame-dot-13{
+      left: 90px;
+      animation:myMove 1.3s infinite 0.2s linear;
+    }
+
+    @keyframes myMove {
+      0%{
+        top: -100px;
+      }
+      50%{
+        top: 0;
+      }
+      100%{
+        top: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+<!--/*相互融合效果*/-->
+<div class="filter-1">
+  <div class="d1"></div>
+  <div class="d2"></div>
+</div>
+
+<!--/*火焰效果*/-->
+<div class="flame">
+  <div class="flame-1">
+    <div class="flame-dot flame-dot-1"></div>
+    <div class="flame-dot flame-dot-2"></div>
+    <div class="flame-dot flame-dot-3"></div>
+    <div class="flame-dot flame-dot-4"></div>
+    <div class="flame-dot flame-dot-5"></div>
+    <div class="flame-dot flame-dot-6"></div>
+    <div class="flame-dot flame-dot-7"></div>
+    <div class="flame-dot flame-dot-8"></div>
+    <div class="flame-dot flame-dot-9"></div>
+    <div class="flame-dot flame-dot-10"></div>
+    <div class="flame-dot flame-dot-11"></div>
+    <div class="flame-dot flame-dot-12"></div>
+    <div class="flame-dot flame-dot-13"></div>
+
+  </div>
+</div>
+</body>
+</html>

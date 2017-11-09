@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="renderer" content="webkit">
+  <meta name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-bar-style" content="black">
+  <meta name="msapplicationt-tap-highlight" content="no">
+  <meta name="format-detection" content="telephone=no,email=no,address=no,date=no">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="goole" value="notranslate">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" type="text/css" href="timer.css"/>
+  <style>
+    li{
+      padding: 20px;
+      /*border-bottom: 1px solid #999999;*/
+    }
+    #input4,#input5{
+      width: 50%;
+      height: 50px;
+      font-size: 20px;
+      outline: none;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<ul>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+</ul>
+<div>
+  <p> 自定义起始年份 </p>
+
+    <input type="text"  id="input4" placeholder="输入开始时间"/>
+
+    <input type="text"  id="input5" placeholder="输入结束时间"/>
+
+
+</div>
+<ul>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+  <li>这是个demo</li>
+</ul>
+
+<script src="../js/jQ/jquery-3.2.1.min.js"></script>
+<script src="timer.js"></script>
+<script>
+
+    $("#input4").shijian({
+      startYear:2001,
+      endYear:2030,
+      Hour:false,//是否显示小时
+      Minute:false,//是否显分钟
+    })
+
+
+    $("#input5").shijian({
+      startYear:2001,
+      endYear:2030,
+      Hour:false,//是否显示小时
+      Minute:false,//是否显分钟
+    })
+
+
+  $('#input4').on('click',function () {
+    $('.df-final').html('开始时间');
+  })
+  $('#input5').on('click',function () {
+    $('.df-final').html('结束时间');
+  })
+</script>
+</body>
+</html>
