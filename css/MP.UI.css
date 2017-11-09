@@ -14,8 +14,8 @@ body {
 }
 html,
 body {
-  /* overflow-x: hidden;
-  overflow-y: auto; */
+  /*overflow-x: hidden;
+  overflow-y: auto;*/
   overflow-scrolling: touch;
   -webkit-overflow-scrolling: touch;
   background: #fff;
